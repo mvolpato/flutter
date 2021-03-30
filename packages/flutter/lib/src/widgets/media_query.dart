@@ -312,7 +312,7 @@ class MediaQueryData {
   ///  * [dart:ui.PlatformDispatcher.accessibilityFeatures], where the setting originates.
   final bool accessibleNavigation;
 
-  /// Whether the device is inverting the colors of the platform.
+  /// Whether the platform is inverting the colors of the platform.
   ///
   /// This flag is currently only updated on iOS devices.
   ///
@@ -322,7 +322,7 @@ class MediaQueryData {
   ///    originates.
   final bool invertColors;
 
-  /// Whether the user requested a high contrast between foreground and background
+  /// Whether the platform is requesting a high contrast between foreground and background
   /// content on iOS, via Settings -> Accessibility -> Increase Contrast.
   ///
   /// This flag is currently only updated on iOS devices that are running iOS 13
@@ -340,6 +340,8 @@ class MediaQueryData {
 
   /// Whether the platform is requesting that text be drawn with a bold font
   /// weight.
+  ///
+  /// Setting this property overrides the value requested by the platform.
   ///
   /// See also:
   ///
